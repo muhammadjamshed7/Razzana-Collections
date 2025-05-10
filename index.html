@@ -1,826 +1,1248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Razzana Collections - Elegance Redefined in Every Thread</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        .heading-font {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-image {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            position: relative;
-        }
-        .product-card:hover .product-overlay {
-            opacity: 1;
-        }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            transition: all 0.3s ease;
-        }
-        .sticky-header.scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      .heading-font {
+        font-family: "Playfair Display", serif;
+      }
+      .hero-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+      }
+      .product-card:hover .product-overlay {
+        opacity: 1;
+      }
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .modal {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .sticky-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition: all 0.3s ease;
+      }
+      .sticky-header.scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
     </style>
-</head>
-<body class="bg-white text-gray-800">
+  </head>
+  <body class="bg-white text-gray-800">
     <!-- Header/Navigation -->
     <header class="sticky-header bg-white py-4">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold heading-font text-gray-800">
-                    <span class="text-rose-600">Razzana</span> Collections
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-rose-600 transition">Home</a>
-                    <a href="#about" class="hover:text-rose-600 transition">About</a>
-                    <a href="#collections" class="hover:text-rose-600 transition">Collections</a>
-                    <a href="#testimonials" class="hover:text-rose-600 transition">Testimonials</a>
-                    <a href="#book" class="hover:text-rose-600 transition">Book Now</a>
-                    <a href="#contact" class="hover:text-rose-600 transition">Contact</a>
-                </nav>
-                <div class="flex space-x-4">
-                    <a href="https://instagram.com/razzana_collections" target="_blank" class="text-gray-700 hover:text-rose-600 transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/447877761838" target="_blank" class="text-gray-700 hover:text-rose-600 transition">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <button class="md:hidden text-gray-700" id="mobile-menu-button">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold heading-font text-gray-800">
+            <span class="text-rose-600">Razzana</span> Collections
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-rose-600 transition">Home</a>
+            <a href="#about" class="hover:text-rose-600 transition">About</a>
+            <a href="#collections" class="hover:text-rose-600 transition"
+              >Collections</a
+            >
+            <a href="#testimonials" class="hover:text-rose-600 transition"
+              >Testimonials</a
+            >
+            <a href="#book" class="hover:text-rose-600 transition">Book Now</a>
+            <a href="#contact" class="hover:text-rose-600 transition"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex space-x-4">
+            <a
+              href="https://instagram.com/razzana_collections"
+              target="_blank"
+              class="text-gray-700 hover:text-rose-600 transition"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/447877761838"
+              target="_blank"
+              class="text-gray-700 hover:text-rose-600 transition"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
-        <!-- Mobile menu -->
-        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
-            <div class="flex flex-col space-y-3">
-                <a href="#home" class="hover:text-rose-600 transition">Home</a>
-                <a href="#about" class="hover:text-rose-600 transition">About</a>
-                <a href="#collections" class="hover:text-rose-600 transition">Collections</a>
-                <a href="#testimonials" class="hover:text-rose-600 transition">Testimonials</a>
-                <a href="#book" class="hover:text-rose-600 transition">Book Now</a>
-                <a href="#contact" class="hover:text-rose-600 transition">Contact</a>
-            </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-3">
+          <a href="#home" class="hover:text-rose-600 transition">Home</a>
+          <a href="#about" class="hover:text-rose-600 transition">About</a>
+          <a href="#collections" class="hover:text-rose-600 transition"
+            >Collections</a
+          >
+          <a href="#testimonials" class="hover:text-rose-600 transition"
+            >Testimonials</a
+          >
+          <a href="#book" class="hover:text-rose-600 transition">Book Now</a>
+          <a href="#contact" class="hover:text-rose-600 transition">Contact</a>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-image parallax" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center">
-            <div class="container mx-auto px-4 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-bold text-white heading-font mb-4">Razzana Collections</h1>
-                <p class="text-xl md:text-2xl text-white mb-8 italic">"Elegance Redefined in Every Thread"</p>
-                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                    <a href="tel:+447877761838" class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full transition flex items-center justify-center">
-                        <i class="fas fa-phone mr-2"></i> Call Now
-                    </a>
-                    <a href="https://wa.me/447877761838" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition flex items-center justify-center">
-                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
-                    </a>
-                    <a href="#collections" class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-full transition flex items-center justify-center">
-                        <i class="fas fa-eye mr-2"></i> View Collections
-                    </a>
-                </div>
-            </div>
+    <section
+      id="home"
+      class="hero-image parallax"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      "
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center">
+        <div class="container mx-auto px-4 text-center md:text-left">
+          <h1
+            class="text-4xl md:text-6xl font-bold text-white heading-font mb-4"
+          >
+            Razzana Collections
+          </h1>
+          <p class="text-xl md:text-2xl text-white mb-8 italic">
+            "Elegance Redefined in Every Thread"
+          </p>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start"
+          >
+            <a
+              href="tel:+447877761838"
+              class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full transition flex items-center justify-center"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+            <a
+              href="https://wa.me/447877761838"
+              target="_blank"
+              class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition flex items-center justify-center"
+            >
+              <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+            </a>
+            <a
+              href="#collections"
+              class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-full transition flex items-center justify-center"
+            >
+              <i class="fas fa-eye mr-2"></i> View Collections
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">About Razzana Collections</h2>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80" alt="Designer working" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="text-lg mb-6">
-                        With 8+ years of experience in fashion design and luxury textile sourcing, Razzana offers curated collections for women who seek elegance, modesty, and global trends — all in one place.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="text-rose-600 mr-4 mt-1">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold">Expert in Abayas & Modest Fashion</h3>
-                                <p class="text-gray-600">Traditional and contemporary designs that blend comfort with sophistication.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-rose-600 mr-4 mt-1">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold">Bridal & Formal Wear</h3>
-                                <p class="text-gray-600">Exquisite gowns for weddings and special occasions that make you feel extraordinary.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-rose-600 mr-4 mt-1">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold">Global Style Trends</h3>
-                                <p class="text-gray-600">Inspired by Turkish, Emirati, Pakistani, and Western fashion influences.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-rose-600 mr-4 mt-1">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold">International Clientele</h3>
-                                <p class="text-gray-600">Hundreds of satisfied clients across the UK, Pakistan, UAE, and beyond.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            About Razzana Collections
+          </h2>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <img
+              src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
+              alt="Designer working"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <p class="text-lg mb-6">
+              With 8+ years of experience in fashion design and luxury textile
+              sourcing, Razzana offers curated collections for women who seek
+              elegance, modesty, and global trends — all in one place.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="text-rose-600 mr-4 mt-1">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Expert in Abayas & Modest Fashion</h3>
+                  <p class="text-gray-600">
+                    Traditional and contemporary designs that blend comfort with
+                    sophistication.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-rose-600 mr-4 mt-1">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Bridal & Formal Wear</h3>
+                  <p class="text-gray-600">
+                    Exquisite gowns for weddings and special occasions that make
+                    you feel extraordinary.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-rose-600 mr-4 mt-1">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Global Style Trends</h3>
+                  <p class="text-gray-600">
+                    Inspired by Turkish, Emirati, Pakistani, and Western fashion
+                    influences.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-rose-600 mr-4 mt-1">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">International Clientele</h3>
+                  <p class="text-gray-600">
+                    Hundreds of satisfied clients across the UK, Pakistan, UAE,
+                    and beyond.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Collections Section -->
     <section id="collections" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Our Collections</h2>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            
-            <!-- Collection Filters -->
-            <div class="flex flex-wrap justify-center mb-8 gap-2">
-                <button class="px-4 py-2 rounded-full bg-rose-600 text-white" data-filter="all">All</button>
-                <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="abaya">Abayas</button>
-                <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="modern">Modern Dresses</button>
-                <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="girls">Girls' Fashion</button>
-                <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="bridal">Bridal/Formal</button>
-                <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="seasonal">Seasonal</button>
-            </div>
-            
-            <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid">
-                <!-- Product items will be added here by JavaScript -->
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            Our Collections
+          </h2>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+
+        <!-- Collection Filters -->
+        <div class="flex flex-wrap justify-center mb-8 gap-2">
+          <button
+            class="px-4 py-2 rounded-full bg-rose-600 text-white"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+            data-filter="abaya"
+          >
+            Abayas
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+            data-filter="modern"
+          >
+            Modern Dresses
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+            data-filter="girls"
+          >
+            Girls' Fashion
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+            data-filter="bridal"
+          >
+            Bridal/Formal
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+            data-filter="seasonal"
+          >
+            Seasonal
+          </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          id="product-grid"
+        >
+          <!-- Product items will be added here by JavaScript -->
+        </div>
+      </div>
     </section>
 
     <!-- Video Section -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Behind the Fabric</h2>
-                <p class="text-xl text-gray-600 mb-6">Watch Our Fashion Journey</p>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden shadow-xl">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            Behind the Fabric
+          </h2>
+          <p class="text-xl text-gray-600 mb-6">Watch Our Fashion Journey</p>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden shadow-xl"
+          >
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Client Testimonials</h2>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Hafsa</h4>
-                            <p class="text-gray-500 text-sm">London, UK</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "The Abaya I ordered was simply breathtaking. Razzana's team is super professional! The attention to detail and quality of fabric exceeded my expectations."
-                    </p>
-                    <div class="mt-4 text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Amna</h4>
-                            <p class="text-gray-500 text-sm">Dubai, UAE</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "I wore a Razzana bridal gown on my wedding. Everyone asked where it was from. The dress was comfortable yet stunning, and I felt like royalty all night."
-                    </p>
-                    <div class="mt-4 text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Sarah</h4>
-                            <p class="text-gray-500 text-sm">Karachi, Pakistan</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "The seasonal collection dresses I bought for Eid were perfect. The fit was excellent, and the designs were unique. I've already recommended Razzana to all my friends."
-                    </p>
-                    <div class="mt-4 text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            Client Testimonials
+          </h2>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4"
+              >
+                <i class="fas fa-user text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Hafsa</h4>
+                <p class="text-gray-500 text-sm">London, UK</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "The Abaya I ordered was simply breathtaking. Razzana's team is
+              super professional! The attention to detail and quality of fabric
+              exceeded my expectations."
+            </p>
+            <div class="mt-4 text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4"
+              >
+                <i class="fas fa-user text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Amna</h4>
+                <p class="text-gray-500 text-sm">Dubai, UAE</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "I wore a Razzana bridal gown on my wedding. Everyone asked where
+              it was from. The dress was comfortable yet stunning, and I felt
+              like royalty all night."
+            </p>
+            <div class="mt-4 text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4"
+              >
+                <i class="fas fa-user text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Sarah</h4>
+                <p class="text-gray-500 text-sm">Karachi, Pakistan</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "The seasonal collection dresses I bought for Eid were perfect.
+              The fit was excellent, and the designs were unique. I've already
+              recommended Razzana to all my friends."
+            </p>
+            <div class="mt-4 text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Booking Section -->
     <section id="book" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Book a Consultation</h2>
-                <p class="text-xl text-gray-600 mb-6">Let's create something beautiful together</p>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="md:flex">
-                        <div class="md:w-1/3 bg-rose-600 text-white p-8 flex flex-col justify-center">
-                            <h3 class="text-xl font-bold mb-4 heading-font">Contact Info</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fas fa-phone mt-1 mr-3"></i>
-                                    <a href="tel:+447877761838" class="hover:underline">+44 7877 761838</a>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fab fa-whatsapp mt-1 mr-3"></i>
-                                    <a href="https://wa.me/447877761838" target="_blank" class="hover:underline">Chat on WhatsApp</a>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-envelope mt-1 mr-3"></i>
-                                    <span>hello@razzanacollections.com</span>
-                                </div>
-                                <div class="pt-4">
-                                    <h4 class="font-bold mb-2">Follow Us</h4>
-                                    <div class="flex space-x-4">
-                                        <a href="https://instagram.com/razzana_collections" target="_blank" class="text-white hover:text-gray-200">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://facebook.com/razzanacollections" target="_blank" class="text-white hover:text-gray-200">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                        <a href="https://tiktok.com/@razzanafashion" target="_blank" class="text-white hover:text-gray-200">
-                                            <i class="fab fa-tiktok"></i>
-                                        </a>
-                                        <a href="https://pinterest.com/razzana_styles" target="_blank" class="text-white hover:text-gray-200">
-                                            <i class="fab fa-pinterest"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="md:w-2/3 p-8">
-                            <form id="booking-form">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                    <div>
-                                        <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-                                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
-                                    </div>
-                                    <div>
-                                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="phone" class="block text-gray-700 mb-2">Phone</label>
-                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="occasion" class="block text-gray-700 mb-2">Occasion / Type of Dress</label>
-                                    <select id="occasion" name="occasion" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
-                                        <option value="">Select an option</option>
-                                        <option value="abaya">Abaya</option>
-                                        <option value="modern-dress">Modern Dress</option>
-                                        <option value="bridal">Bridal Wear</option>
-                                        <option value="formal">Formal Wear</option>
-                                        <option value="girls-fashion">Girls' Fashion</option>
-                                        <option value="seasonal">Seasonal Collection</option>
-                                        <option value="custom">Custom Design</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="message" class="block text-gray-700 mb-2">Message</label>
-                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"></textarea>
-                                </div>
-                                <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg transition">
-                                    Send Booking Request
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            Book a Consultation
+          </h2>
+          <p class="text-xl text-gray-600 mb-6">
+            Let's create something beautiful together
+          </p>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="md:flex">
+              <div
+                class="md:w-1/3 bg-rose-600 text-white p-8 flex flex-col justify-center"
+              >
+                <h3 class="text-xl font-bold mb-4 heading-font">
+                  Contact Info
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <i class="fas fa-phone mt-1 mr-3"></i>
+                    <a href="tel:+447877761838" class="hover:underline"
+                      >+44 7877 761838</a
+                    >
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fab fa-whatsapp mt-1 mr-3"></i>
+                    <a
+                      href="https://wa.me/447877761838"
+                      target="_blank"
+                      class="hover:underline"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-envelope mt-1 mr-3"></i>
+                    <span>hello@razzanacollections.com</span>
+                  </div>
+                  <div class="pt-4">
+                    <h4 class="font-bold mb-2">Follow Us</h4>
+                    <div class="flex space-x-4">
+                      <a
+                        href="https://instagram.com/razzana_collections"
+                        target="_blank"
+                        class="text-white hover:text-gray-200"
+                      >
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a
+                        href="https://facebook.com/razzanacollections"
+                        target="_blank"
+                        class="text-white hover:text-gray-200"
+                      >
+                        <i class="fab fa-facebook"></i>
+                      </a>
+                      <a
+                        href="https://tiktok.com/@razzanafashion"
+                        target="_blank"
+                        class="text-white hover:text-gray-200"
+                      >
+                        <i class="fab fa-tiktok"></i>
+                      </a>
+                      <a
+                        href="https://pinterest.com/razzana_styles"
+                        target="_blank"
+                        class="text-white hover:text-gray-200"
+                      >
+                        <i class="fab fa-pinterest"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-2/3 p-8">
+                <form id="booking-form">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label for="name" class="block text-gray-700 mb-2"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label for="email" class="block text-gray-700 mb-2"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="phone" class="block text-gray-700 mb-2"
+                      >Phone</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="occasion" class="block text-gray-700 mb-2"
+                      >Occasion / Type of Dress</label
+                    >
+                    <select
+                      id="occasion"
+                      name="occasion"
+                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+                      required
+                    >
+                      <option value="">Select an option</option>
+                      <option value="abaya">Abaya</option>
+                      <option value="modern-dress">Modern Dress</option>
+                      <option value="bridal">Bridal Wear</option>
+                      <option value="formal">Formal Wear</option>
+                      <option value="girls-fashion">Girls' Fashion</option>
+                      <option value="seasonal">Seasonal Collection</option>
+                      <option value="custom">Custom Design</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <label for="message" class="block text-gray-700 mb-2"
+                      >Message</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg transition"
+                  >
+                    Send Booking Request
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Visit Us</h2>
-                <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
-            </div>
-            <div class="max-w-5xl mx-auto">
-                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <div class="h-full w-full bg-gray-300" id="map">
-                                <!-- Map placeholder - in a real implementation you would embed Google Maps here -->
-                                <div class="h-full w-full flex items-center justify-center bg-gray-200">
-                                    <div class="text-center p-8">
-                                        <i class="fas fa-map-marker-alt text-4xl text-rose-600 mb-4"></i>
-                                        <h3 class="text-xl font-bold mb-2">Razzana Collections</h3>
-                                        <p class="text-gray-600">123 Fashion Avenue<br>London, UK</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 p-8">
-                            <h3 class="text-2xl font-bold mb-4 heading-font">Get In Touch</h3>
-                            <div class="space-y-4 mb-6">
-                                <div class="flex items-start">
-                                    <i class="fas fa-map-marker-alt text-rose-600 mt-1 mr-3"></i>
-                                    <div>
-                                        <h4 class="font-bold">Studio Address</h4>
-                                        <p class="text-gray-600">123 Fashion Avenue, London, UK</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-clock text-rose-600 mt-1 mr-3"></i>
-                                    <div>
-                                        <h4 class="font-bold">Working Hours</h4>
-                                        <p class="text-gray-600">Monday - Friday: 10am - 6pm<br>Saturday: 11am - 4pm<br>Sunday: Closed</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-info-circle text-rose-600 mt-1 mr-3"></i>
-                                    <div>
-                                        <h4 class="font-bold">Appointments</h4>
-                                        <p class="text-gray-600">By appointment only. Please book in advance.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-rose-50 border-l-4 border-rose-600 p-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0 text-rose-600">
-                                        <i class="fas fa-info-circle"></i>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-rose-700">
-                                            Due to high demand, we recommend booking your consultation at least 2 weeks in advance, especially for bridal and custom designs.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">
+            Visit Us
+          </h2>
+          <div class="w-24 h-1 bg-rose-600 mx-auto"></div>
         </div>
+        <div class="max-w-5xl mx-auto">
+          <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="md:flex">
+              <div class="md:w-1/2">
+                <div class="h-full w-full bg-gray-300" id="map">
+                  <!-- Map placeholder - in a real implementation you would embed Google Maps here -->
+                  <div
+                    class="h-full w-full flex items-center justify-center bg-gray-200"
+                  >
+                    <div class="text-center p-8">
+                      <i
+                        class="fas fa-map-marker-alt text-4xl text-rose-600 mb-4"
+                      ></i>
+                      <h3 class="text-xl font-bold mb-2">
+                        Razzana Collections
+                      </h3>
+                      <p class="text-gray-600">
+                        123 Fashion Avenue<br />London, UK
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-1/2 p-8">
+                <h3 class="text-2xl font-bold mb-4 heading-font">
+                  Get In Touch
+                </h3>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start">
+                    <i
+                      class="fas fa-map-marker-alt text-rose-600 mt-1 mr-3"
+                    ></i>
+                    <div>
+                      <h4 class="font-bold">Studio Address</h4>
+                      <p class="text-gray-600">
+                        123 Fashion Avenue, London, UK
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-clock text-rose-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">Working Hours</h4>
+                      <p class="text-gray-600">
+                        Monday - Friday: 10am - 6pm<br />Saturday: 11am - 4pm<br />Sunday:
+                        Closed
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-info-circle text-rose-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">Appointments</h4>
+                      <p class="text-gray-600">
+                        By appointment only. Please book in advance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-rose-50 border-l-4 border-rose-600 p-4">
+                  <div class="flex">
+                    <div class="flex-shrink-0 text-rose-600">
+                      <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-sm text-rose-700">
+                        Due to high demand, we recommend booking your
+                        consultation at least 2 weeks in advance, especially for
+                        bridal and custom designs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold heading-font mb-4">
-                        <span class="text-rose-400">Razzana</span> Collections
-                    </h3>
-                    <p class="mb-4 text-gray-400">
-                        Elegance Redefined in Every Thread. Luxury fashion for the modern woman.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/razzana_collections" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/razzanacollections" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://tiktok.com/@razzanafashion" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://pinterest.com/razzana_styles" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 heading-font">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Collections</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
-                        <li><a href="#book" class="text-gray-400 hover:text-white transition">Book Now</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 heading-font">Collections</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Abayas</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Modern Dresses</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Girls' Fashion</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Bridal Wear</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Seasonal Collections</a></li>
-                        <li><a href="#collections" class="text-gray-400 hover:text-white transition">Custom Designs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 heading-font">Contact</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
-                            <span class="text-gray-400">123 Fashion Avenue, London, UK</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone mt-1 mr-2 text-gray-400"></i>
-                            <a href="tel:+447877761838" class="text-gray-400 hover:text-white transition">+44 7877 761838</a>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
-                            <a href="mailto:hello@razzanacollections.com" class="text-gray-400 hover:text-white transition">hello@razzanacollections.com</a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold heading-font mb-4">
+              <span class="text-rose-400">Razzana</span> Collections
+            </h3>
+            <p class="mb-4 text-gray-400">
+              Elegance Redefined in Every Thread. Luxury fashion for the modern
+              woman.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://instagram.com/razzana_collections"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://facebook.com/razzanacollections"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://tiktok.com/@razzanafashion"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://pinterest.com/razzana_styles"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition"
+              >
+                <i class="fab fa-pinterest"></i>
+              </a>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Razzana Collections. All rights reserved.</p>
-            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4 heading-font">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#book"
+                  class="text-gray-400 hover:text-white transition"
+                  >Book Now</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4 heading-font">Collections</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Abayas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Modern Dresses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Girls' Fashion</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Bridal Wear</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Seasonal Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-gray-400 hover:text-white transition"
+                  >Custom Designs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4 heading-font">Contact</h4>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                <span class="text-gray-400"
+                  >123 Fashion Avenue, London, UK</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-2 text-gray-400"></i>
+                <a
+                  href="tel:+447877761838"
+                  class="text-gray-400 hover:text-white transition"
+                  >+44 7877 761838</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                <a
+                  href="mailto:hello@razzanacollections.com"
+                  class="text-gray-400 hover:text-white transition"
+                  >hello@razzanacollections.com</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2025 Razzana Collections. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Product Modal -->
-    <div class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 opacity-0 invisible" id="product-modal">
-        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
-            <div class="relative">
-                <button class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg z-10 hover:bg-gray-100" id="close-modal">
-                    <i class="fas fa-times text-gray-800"></i>
-                </button>
-                <div class="md:flex">
-                    <div class="md:w-1/2">
-                        <img src="" alt="Product Image" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none" id="modal-image">
-                    </div>
-                    <div class="md:w-1/2 p-6">
-                        <h3 class="text-2xl font-bold mb-2 heading-font" id="modal-title"></h3>
-                        <div class="flex items-center mb-4">
-                            <span class="text-rose-600 font-bold text-xl" id="modal-price"></span>
-                            <span class="ml-2 text-gray-500" id="modal-delivery"></span>
-                        </div>
-                        <div class="mb-4">
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2" id="modal-category"></span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700" id="modal-style"></span>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="font-bold mb-2">Fabric & Details</h4>
-                            <p class="text-gray-700" id="modal-fabric"></p>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="font-bold mb-2">Description</h4>
-                            <p class="text-gray-700" id="modal-description"></p>
-                        </div>
-                        <a href="https://wa.me/447877761838" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3 rounded-lg transition flex items-center justify-center">
-                            <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
+    <div
+      class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 opacity-0 invisible"
+      id="product-modal"
+    >
+      <div
+        class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto"
+      >
+        <div class="relative">
+          <button
+            class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg z-10 hover:bg-gray-100"
+            id="close-modal"
+          >
+            <i class="fas fa-times text-gray-800"></i>
+          </button>
+          <div class="md:flex">
+            <div class="md:w-1/2">
+              <img
+                src=""
+                alt="Product Image"
+                class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                id="modal-image"
+              />
             </div>
+            <div class="md:w-1/2 p-6">
+              <h3
+                class="text-2xl font-bold mb-2 heading-font"
+                id="modal-title"
+              ></h3>
+              <div class="flex items-center mb-4">
+                <span
+                  class="text-rose-600 font-bold text-xl"
+                  id="modal-price"
+                ></span>
+                <span class="ml-2 text-gray-500" id="modal-delivery"></span>
+              </div>
+              <div class="mb-4">
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                  id="modal-category"
+                ></span>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+                  id="modal-style"
+                ></span>
+              </div>
+              <div class="mb-6">
+                <h4 class="font-bold mb-2">Fabric & Details</h4>
+                <p class="text-gray-700" id="modal-fabric"></p>
+              </div>
+              <div class="mb-6">
+                <h4 class="font-bold mb-2">Description</h4>
+                <p class="text-gray-700" id="modal-description"></p>
+              </div>
+              <!-- <a
+                href="https://wa.me/447877761838"
+                target="_blank"
+                class="block w-full bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3 rounded-lg transition flex items-center justify-center"
+              >
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a> -->
+              <a
+                href="https://wa.me/447877761838"
+                target="_blank"
+                class="block w-full bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3 rounded-lg transition flex items-center justify-center"
+              >
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Success Modal -->
-    <div class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 opacity-0 invisible" id="success-modal">
-        <div class="bg-white rounded-lg max-w-md w-full p-8 text-center">
-            <div class="text-green-500 text-5xl mb-4">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-2 heading-font">Thank You!</h3>
-            <p class="text-gray-700 mb-6">Your booking request has been submitted successfully. We'll contact you shortly to confirm your appointment.</p>
-            <button class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-2 rounded-lg transition" id="close-success-modal">
-                Close
-            </button>
+    <div
+      class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 opacity-0 invisible"
+      id="success-modal"
+    >
+      <div class="bg-white rounded-lg max-w-md w-full p-8 text-center">
+        <div class="text-green-500 text-5xl mb-4">
+          <i class="fas fa-check-circle"></i>
         </div>
+        <h3 class="text-2xl font-bold mb-2 heading-font">Thank You!</h3>
+        <p class="text-gray-700 mb-6">
+          Your booking request has been submitted successfully. We'll contact
+          you shortly to confirm your appointment.
+        </p>
+        <button
+          class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-2 rounded-lg transition"
+          id="close-success-modal"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
     <script>
-        // Sample product data
-        const products = [
-            // Modern Dresses
-            {
-                id: 1,
-                title: "Embroidered Maxi Dress",
-                price: "£129.99",
-                category: "modern",
-                image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-                fabric: "Premium cotton blend with delicate embroidery",
-                style: "Turkish",
-                delivery: "(Ready to ship)",
-                description: "This elegant maxi dress features intricate embroidery along the neckline and sleeves. The flowing silhouette flatters all body types while maintaining modesty. Perfect for special occasions or elevated everyday wear."
-            },
-            {
-                id: 2,
-                title: "Silk Wrap Dress",
-                price: "£159.99",
-                category: "modern",
-                image: "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-                fabric: "100% pure silk with satin lining",
-                style: "Western",
-                delivery: "(Made to order - 2 weeks)",
-                description: "Luxurious silk wrap dress with a modest neckline and flowing silhouette. The adjustable wrap design ensures a perfect fit for all body types. Comes in a range of beautiful seasonal colors."
-            },
-            {
-                id: 3,
-                title: "Layered Tulle Dress",
-                price: "£179.99",
-                category: "modern",
-                image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80",
-                fabric: "Soft tulle overlay with cotton underdress",
-                style: "Emirati",
-                delivery: "(Made to order - 3 weeks)",
-                description: "Dreamy layered tulle dress with delicate beadwork. The modest design features long sleeves and a high neckline while maintaining a romantic, feminine aesthetic. Perfect for weddings and special events."
-            },
-            // Abayas
-            {
-                id: 4,
-                title: "Classic Black Abaya",
-                price: "£89.99",
-                category: "abaya",
-                image: "https://www.shamswear.com/cdn/shop/articles/Munirah_Abaya__AS_600x600_crop_center.jpg?v=1603677252",
-                fabric: "Premium crepe with silk accents",
-                style: "Traditional",
-                delivery: "(Ready to ship)",
-                description: "Timeless black abaya with elegant draping and subtle detailing. The lightweight fabric moves beautifully while providing full coverage. Features hidden pockets and adjustable cuffs."
-            },
-            {
-                id: 5,
-                title: "Embroidered Open Abaya",
-                price: "£139.99",
-                category: "abaya",
-                image: "https://levantswan.com/cdn/shop/files/IMG_9769_1024x1024.jpg?v=1727887097",
-                fabric: "Chiffon with hand-embroidered details",
-                style: "Pakistani",
-                delivery: "(Made to order - 10 days)",
-                description: "Stunning open abaya with intricate hand embroidery along the edges. The lightweight chiffon flows beautifully over any outfit. Can be worn as a cover-up or standalone piece."
-            },
-            {
-                id: 6,
-                title: "Modern Kimono Abaya",
-                price: "£119.99",
-                category: "abaya",
-                image: "https://rizwanfashion.com/cdn/shop/products/LinenKimono-1200x1500_0003_Layer1.jpg?v=1648791133",
-                fabric: "Silk blend with geometric print",
-                style: "Contemporary",
-                delivery: "(Ready to ship)",
-                description: "Contemporary take on the traditional abaya with kimono-inspired sleeves and modern geometric print. The belted waist creates a flattering silhouette while maintaining modesty."
-            },
-            // Girls' Fashion
-            {
-                id: 7,
-                title: "Princess Party Dress",
-                price: "£49.99",
-                category: "girls",
-                image: "https://www.bridalsew.com/cdn/shop/products/A-lineLongRedOneShoulderSparklyTulleModestPrincessPartyPromDresses_BallGownPD11823.jpg?v=1669715727",
-                fabric: "Tulle and satin with lace details",
-                style: "Fairytale",
-                delivery: "(Ready to ship)",
-                description: "Every little girl's dream dress! This princess-style party dress features layers of soft tulle, satin bodice, and delicate lace accents. Available in multiple colors and sizes 2-12."
-            },
-            {
-                id: 8,
-                title: "Casual Denim Abaya",
-                price: "£39.99",
-                category: "girls",
-                image: "https://i.pinimg.com/originals/76/db/8f/76db8fefc5a2978638046ed5a2ca5a7f.jpg",
-                fabric: "Soft stretch denim with cotton lining",
-                style: "Casual",
-                delivery: "(Ready to ship)",
-                description: "Perfect for school or playdates, this denim abaya provides full coverage while allowing freedom of movement. Features hidden pockets and comes in light and dark wash options."
-            },
-            {
-                id: 9,
-                title: "Floral Eid Dress",
-                price: "£59.99",
-                category: "girls",
-                image: "https://i.pinimg.com/736x/20/23/fa/2023fa0b5eef5523a3013bb08740fdfa.jpg",
-                fabric: "Cotton with floral embroidery",
-                style: "Traditional",
-                delivery: "(Made to order - 1 week)",
-                description: "Beautiful traditional dress for special occasions like Eid. Features hand-embroidered floral patterns and delicate beadwork. Matching hijabs available separately."
-            },
-            // Bridal/Formal
-            {
-                id: 10,
-                title: "Crystal Embellished Gown",
-                price: "£499.99",
-                category: "bridal",
-                image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-                fabric: "Duchess satin with Swarovski crystals",
-                style: "Bridal",
-                delivery: "(Made to order - 6 weeks)",
-                description: "Show-stopping bridal gown with intricate crystal embellishments. The modest design features long sleeves, high neckline, and a flowing train. Custom measurements and alterations included."
-            },
-            {
-                id: 11,
-                title: "Velvet Evening Gown",
-                price: "£349.99",
-                category: "bridal",
-                image: "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-                fabric: "Luxury velvet with silk lining",
-                style: "Formal",
-                delivery: "(Made to order - 4 weeks)",
-                description: "Regal evening gown in rich velvet with modest yet glamorous design. The draped silhouette and jewel-toned colors make this perfect for weddings and formal events."
-            },
-            {
-                id: 12,
-                title: "Lace Kaftan Dress",
-                price: "£279.99",
-                category: "bridal",
-                image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80",
-                fabric: "French lace with silk underdress",
-                style: "Emirati",
-                delivery: "(Made to order - 3 weeks)",
-                description: "Elegant lace kaftan dress that combines traditional design with contemporary elegance. The intricate lace patterns and flowing silhouette create a breathtaking bridal or formal look."
-            },
-            // Seasonal
-            {
-                id: 13,
-                title: "Eid Collection Dress",
-                price: "£129.99",
-                category: "seasonal",
-                image: "https://www.nidhikashekhar.in/cdn/shop/files/NSS289_1_a02ed833-8acf-477f-bcb6-1b00b1f7a2a5.jpg?v=1744629515&width=1200",
-                fabric: "Silk with metallic thread embroidery",
-                style: "Pakistani",
-                delivery: "(Ready to ship)",
-                description: "Special edition dress for Eid celebrations. Features metallic thread embroidery in traditional patterns with a modern silhouette. Matching hijab available."
-            },
-            {
-                id: 14,
-                title: "Summer Linen Abaya",
-                price: "£79.99",
-                category: "seasonal",
-                image: "https://cdn.shopify.com/s/files/1/0649/6754/0952/files/MOA016-2.jpg?v=1739869824",
-                fabric: "Breathable linen blend",
-                style: "Contemporary",
-                delivery: "(Ready to ship)",
-                description: "Lightweight abaya perfect for warm weather. The breathable linen fabric keeps you cool while the tailored cut maintains elegance. Available in summer pastels and neutrals."
-            },
-            {
-                id: 15,
-                title: "Winter Velvet Dress",
-                price: "£149.99",
-                category: "seasonal",
-                image: "https://m.media-amazon.com/images/I/61zy2htwOrL._AC_SL1001_.jpg",
-                fabric: "Heavy velvet with wool lining",
-                style: "Turkish",
-                delivery: "(Made to order - 2 weeks)",
-                description: "Luxurious winter dress designed for both warmth and style. The rich velvet fabric features intricate embroidery and is fully lined for insulation against cold weather."
-            }
-        ];
+      // Sample product data
+      const products = [
+        // Modern Dresses
+        {
+          id: 1,
+          title: "Embroidered Maxi Dress",
+          price: "£129.99",
+          category: "modern",
+          image:
+            "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          fabric: "Premium cotton blend with delicate embroidery",
+          style: "Turkish",
+          delivery: "(Ready to ship)",
+          description:
+            "This elegant maxi dress features intricate embroidery along the neckline and sleeves. The flowing silhouette flatters all body types while maintaining modesty. Perfect for special occasions or elevated everyday wear.",
+        },
+        {
+          id: 2,
+          title: "Silk Wrap Dress",
+          price: "£159.99",
+          category: "modern",
+          image:
+            "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+          fabric: "100% pure silk with satin lining",
+          style: "Western",
+          delivery: "(Made to order - 2 weeks)",
+          description:
+            "Luxurious silk wrap dress with a modest neckline and flowing silhouette. The adjustable wrap design ensures a perfect fit for all body types. Comes in a range of beautiful seasonal colors.",
+        },
+        {
+          id: 3,
+          title: "Layered Tulle Dress",
+          price: "£179.99",
+          category: "modern",
+          image:
+            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80",
+          fabric: "Soft tulle overlay with cotton underdress",
+          style: "Emirati",
+          delivery: "(Made to order - 3 weeks)",
+          description:
+            "Dreamy layered tulle dress with delicate beadwork. The modest design features long sleeves and a high neckline while maintaining a romantic, feminine aesthetic. Perfect for weddings and special events.",
+        },
+        // Abayas
+        {
+          id: 4,
+          title: "Classic Black Abaya",
+          price: "£89.99",
+          category: "abaya",
+          image:
+            "https://www.shamswear.com/cdn/shop/articles/Munirah_Abaya__AS_600x600_crop_center.jpg?v=1603677252",
+          fabric: "Premium crepe with silk accents",
+          style: "Traditional",
+          delivery: "(Ready to ship)",
+          description:
+            "Timeless black abaya with elegant draping and subtle detailing. The lightweight fabric moves beautifully while providing full coverage. Features hidden pockets and adjustable cuffs.",
+        },
+        {
+          id: 5,
+          title: "Embroidered Open Abaya",
+          price: "£139.99",
+          category: "abaya",
+          image:
+            "https://levantswan.com/cdn/shop/files/IMG_9769_1024x1024.jpg?v=1727887097",
+          fabric: "Chiffon with hand-embroidered details",
+          style: "Pakistani",
+          delivery: "(Made to order - 10 days)",
+          description:
+            "Stunning open abaya with intricate hand embroidery along the edges. The lightweight chiffon flows beautifully over any outfit. Can be worn as a cover-up or standalone piece.",
+        },
+        {
+          id: 6,
+          title: "Modern Kimono Abaya",
+          price: "£119.99",
+          category: "abaya",
+          image:
+            "https://rizwanfashion.com/cdn/shop/products/LinenKimono-1200x1500_0003_Layer1.jpg?v=1648791133",
+          fabric: "Silk blend with geometric print",
+          style: "Contemporary",
+          delivery: "(Ready to ship)",
+          description:
+            "Contemporary take on the traditional abaya with kimono-inspired sleeves and modern geometric print. The belted waist creates a flattering silhouette while maintaining modesty.",
+        },
+        // Girls' Fashion
+        {
+          id: 7,
+          title: "Princess Party Dress",
+          price: "£49.99",
+          category: "girls",
+          image:
+            "https://www.bridalsew.com/cdn/shop/products/A-lineLongRedOneShoulderSparklyTulleModestPrincessPartyPromDresses_BallGownPD11823.jpg?v=1669715727",
+          fabric: "Tulle and satin with lace details",
+          style: "Fairytale",
+          delivery: "(Ready to ship)",
+          description:
+            "Every little girl's dream dress! This princess-style party dress features layers of soft tulle, satin bodice, and delicate lace accents. Available in multiple colors and sizes 2-12.",
+        },
+        {
+          id: 8,
+          title: "Casual Denim Abaya",
+          price: "£39.99",
+          category: "girls",
+          image:
+            "https://i.pinimg.com/originals/76/db/8f/76db8fefc5a2978638046ed5a2ca5a7f.jpg",
+          fabric: "Soft stretch denim with cotton lining",
+          style: "Casual",
+          delivery: "(Ready to ship)",
+          description:
+            "Perfect for school or playdates, this denim abaya provides full coverage while allowing freedom of movement. Features hidden pockets and comes in light and dark wash options.",
+        },
+        {
+          id: 9,
+          title: "Floral Eid Dress",
+          price: "£59.99",
+          category: "girls",
+          image:
+            "https://i.pinimg.com/736x/20/23/fa/2023fa0b5eef5523a3013bb08740fdfa.jpg",
+          fabric: "Cotton with floral embroidery",
+          style: "Traditional",
+          delivery: "(Made to order - 1 week)",
+          description:
+            "Beautiful traditional dress for special occasions like Eid. Features hand-embroidered floral patterns and delicate beadwork. Matching hijabs available separately.",
+        },
+        // Bridal/Formal
+        {
+          id: 10,
+          title: "Crystal Embellished Gown",
+          price: "£499.99",
+          category: "bridal",
+          image:
+            "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          fabric: "Duchess satin with Swarovski crystals",
+          style: "Bridal",
+          delivery: "(Made to order - 6 weeks)",
+          description:
+            "Show-stopping bridal gown with intricate crystal embellishments. The modest design features long sleeves, high neckline, and a flowing train. Custom measurements and alterations included.",
+        },
+        {
+          id: 11,
+          title: "Velvet Evening Gown",
+          price: "£349.99",
+          category: "bridal",
+          image:
+            "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+          fabric: "Luxury velvet with silk lining",
+          style: "Formal",
+          delivery: "(Made to order - 4 weeks)",
+          description:
+            "Regal evening gown in rich velvet with modest yet glamorous design. The draped silhouette and jewel-toned colors make this perfect for weddings and formal events.",
+        },
+        {
+          id: 12,
+          title: "Lace Kaftan Dress",
+          price: "£279.99",
+          category: "bridal",
+          image:
+            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80",
+          fabric: "French lace with silk underdress",
+          style: "Emirati",
+          delivery: "(Made to order - 3 weeks)",
+          description:
+            "Elegant lace kaftan dress that combines traditional design with contemporary elegance. The intricate lace patterns and flowing silhouette create a breathtaking bridal or formal look.",
+        },
+        // Seasonal
+        {
+          id: 13,
+          title: "Eid Collection Dress",
+          price: "£129.99",
+          category: "seasonal",
+          image:
+            "https://www.nidhikashekhar.in/cdn/shop/files/NSS289_1_a02ed833-8acf-477f-bcb6-1b00b1f7a2a5.jpg?v=1744629515&width=1200",
+          fabric: "Silk with metallic thread embroidery",
+          style: "Pakistani",
+          delivery: "(Ready to ship)",
+          description:
+            "Special edition dress for Eid celebrations. Features metallic thread embroidery in traditional patterns with a modern silhouette. Matching hijab available.",
+        },
+        {
+          id: 14,
+          title: "Summer Linen Abaya",
+          price: "£79.99",
+          category: "seasonal",
+          image:
+            "https://cdn.shopify.com/s/files/1/0649/6754/0952/files/MOA016-2.jpg?v=1739869824",
+          fabric: "Breathable linen blend",
+          style: "Contemporary",
+          delivery: "(Ready to ship)",
+          description:
+            "Lightweight abaya perfect for warm weather. The breathable linen fabric keeps you cool while the tailored cut maintains elegance. Available in summer pastels and neutrals.",
+        },
+        {
+          id: 15,
+          title: "Winter Velvet Dress",
+          price: "£149.99",
+          category: "seasonal",
+          image:
+            "https://m.media-amazon.com/images/I/61zy2htwOrL._AC_SL1001_.jpg",
+          fabric: "Heavy velvet with wool lining",
+          style: "Turkish",
+          delivery: "(Made to order - 2 weeks)",
+          description:
+            "Luxurious winter dress designed for both warmth and style. The rich velvet fabric features intricate embroidery and is fully lined for insulation against cold weather.",
+        },
+      ];
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Render products
-            renderProducts();
-            
-            // Mobile menu toggle
-            document.getElementById('mobile-menu-button').addEventListener('click', function() {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
-            
-            // Filter products
-            const filterButtons = document.querySelectorAll('[data-filter]');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active button
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('bg-rose-600', 'text-white');
-                        btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
-                    });
-                    this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
-                    this.classList.add('bg-rose-600', 'text-white');
-                    
-                    // Filter products
-                    const filter = this.dataset.filter;
-                    renderProducts(filter);
-                });
-            });
-            
-            // Sticky header
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.sticky-header');
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-            
-            // Booking form submission
-            document.getElementById('booking-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                // In a real app, you would send this data to your server
-                document.getElementById('success-modal').classList.remove('invisible', 'opacity-0');
-            });
-            
-            // Close modals
-            document.getElementById('close-modal').addEventListener('click', closeModal);
-            document.getElementById('close-success-modal').addEventListener('click', function() {
-                document.getElementById('success-modal').classList.add('invisible', 'opacity-0');
-            });
-            
-            // Close modal when clicking outside
-            document.getElementById('product-modal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeModal();
-                }
-            });
-        });
-        
+      // Initialize the page
+      document.addEventListener("DOMContentLoaded", function () {
         // Render products
-        function renderProducts(filter = 'all') {
-            const container = document.getElementById('product-grid');
-            container.innerHTML = '';
-            
-            const filteredProducts = filter === 'all' 
-                ? products 
-                : products.filter(product => product.category === filter);
-            
-            filteredProducts.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 relative';
-                productCard.innerHTML = `
+        renderProducts();
+
+        // Mobile menu toggle
+        document
+          .getElementById("mobile-menu-button")
+          .addEventListener("click", function () {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+          });
+
+        // Filter products
+        const filterButtons = document.querySelectorAll("[data-filter]");
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Update active button
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("bg-rose-600", "text-white");
+              btn.classList.add("bg-gray-200", "hover:bg-gray-300");
+            });
+            this.classList.remove("bg-gray-200", "hover:bg-gray-300");
+            this.classList.add("bg-rose-600", "text-white");
+
+            // Filter products
+            const filter = this.dataset.filter;
+            renderProducts(filter);
+          });
+        });
+
+        // Sticky header
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector(".sticky-header");
+          if (window.scrollY > 100) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+
+        // Booking form submission
+        document
+          .getElementById("booking-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            // In a real app, you would send this data to your server
+            document
+              .getElementById("success-modal")
+              .classList.remove("invisible", "opacity-0");
+          });
+
+        // Close modals
+        document
+          .getElementById("close-modal")
+          .addEventListener("click", closeModal);
+        document
+          .getElementById("close-success-modal")
+          .addEventListener("click", function () {
+            document
+              .getElementById("success-modal")
+              .classList.add("invisible", "opacity-0");
+          });
+
+        // Close modal when clicking outside
+        document
+          .getElementById("product-modal")
+          .addEventListener("click", function (e) {
+            if (e.target === this) {
+              closeModal();
+            }
+          });
+      });
+
+      // Render products
+      function renderProducts(filter = "all") {
+        const container = document.getElementById("product-grid");
+        container.innerHTML = "";
+
+        const filteredProducts =
+          filter === "all"
+            ? products
+            : products.filter((product) => product.category === filter);
+
+        filteredProducts.forEach((product) => {
+          const productCard = document.createElement("div");
+          productCard.className =
+            "product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 relative";
+          productCard.innerHTML = `
                     <div class="relative">
-                        <img src="${product.image}" alt="${product.title}" class="w-full h-64 object-cover">
+                        <img src="${product.image}" alt="${
+            product.title
+          }" class="w-full h-64 object-cover">
                         <div class="product-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition duration-300">
-                            <button class="bg-white text-rose-600 px-4 py-2 rounded-full view-details" data-id="${product.id}">
+                            <button class="bg-white text-rose-600 px-4 py-2 rounded-full view-details" data-id="${
+                              product.id
+                            }">
                                 View Details
                             </button>
                         </div>
@@ -828,57 +1250,67 @@
                     <div class="p-4">
                         <h3 class="font-bold text-lg mb-1">${product.title}</h3>
                         <div class="flex justify-between items-center">
-                            <span class="text-rose-600 font-bold">${product.price}</span>
-                            <span class="text-xs bg-gray-200 px-2 py-1 rounded">${getCategoryName(product.category)}</span>
+                            <span class="text-rose-600 font-bold">${
+                              product.price
+                            }</span>
+                            <span class="text-xs bg-gray-200 px-2 py-1 rounded">${getCategoryName(
+                              product.category
+                            )}</span>
                         </div>
                     </div>
                 `;
-                container.appendChild(productCard);
-            });
-            
-            // Add event listeners to view buttons
-            document.querySelectorAll('.view-details').forEach(button => {
-                button.addEventListener('click', function() {
-                    const productId = parseInt(this.dataset.id);
-                    showProductModal(productId);
-                });
-            });
-        }
-        
-        // Show product modal
-        function showProductModal(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-            
-            document.getElementById('modal-image').src = product.image;
-            document.getElementById('modal-title').textContent = product.title;
-            document.getElementById('modal-price').textContent = product.price;
-            document.getElementById('modal-delivery').textContent = product.delivery;
-            document.getElementById('modal-category').textContent = getCategoryName(product.category);
-            document.getElementById('modal-style').textContent = product.style;
-            document.getElementById('modal-fabric').textContent = product.fabric;
-            document.getElementById('modal-description').textContent = product.description;
-            
-            const modal = document.getElementById('product-modal');
-            modal.classList.remove('invisible', 'opacity-0');
-        }
-        
-        // Close modal
-        function closeModal() {
-            document.getElementById('product-modal').classList.add('invisible', 'opacity-0');
-        }
-        
-        // Get category display name
-        function getCategoryName(category) {
-            const names = {
-                'modern': 'Modern Dress',
-                'abaya': 'Abaya',
-                'girls': 'Girls',
-                'bridal': 'Bridal',
-                'seasonal': 'Seasonal'
-            };
-            return names[category] || category;
-        }
+          container.appendChild(productCard);
+        });
+
+        // Add event listeners to view buttons
+        document.querySelectorAll(".view-details").forEach((button) => {
+          button.addEventListener("click", function () {
+            const productId = parseInt(this.dataset.id);
+            showProductModal(productId);
+          });
+        });
+      }
+
+      // Show product modal
+      function showProductModal(productId) {
+        const product = products.find((p) => p.id === productId);
+        if (!product) return;
+
+        document.getElementById("modal-image").src = product.image;
+        document.getElementById("modal-title").textContent = product.title;
+        document.getElementById("modal-price").textContent = product.price;
+        document.getElementById("modal-delivery").textContent =
+          product.delivery;
+        document.getElementById("modal-category").textContent = getCategoryName(
+          product.category
+        );
+        document.getElementById("modal-style").textContent = product.style;
+        document.getElementById("modal-fabric").textContent = product.fabric;
+        document.getElementById("modal-description").textContent =
+          product.description;
+
+        const modal = document.getElementById("product-modal");
+        modal.classList.remove("invisible", "opacity-0");
+      }
+
+      // Close modal
+      function closeModal() {
+        document
+          .getElementById("product-modal")
+          .classList.add("invisible", "opacity-0");
+      }
+
+      // Get category display name
+      function getCategoryName(category) {
+        const names = {
+          modern: "Modern Dress",
+          abaya: "Abaya",
+          girls: "Girls",
+          bridal: "Bridal",
+          seasonal: "Seasonal",
+        };
+        return names[category] || category;
+      }
     </script>
-</body>
+  </body>
 </html>
